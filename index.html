@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lana Do – Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f6f6f6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+      background-color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      min-height: 100vh;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.25rem;
+    }
+    p {
+      line-height: 1.5;
+    }
+    .subtitle {
+      color: #666;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+    }
+    ul.publications {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul.publications li {
+      margin-bottom: 0.85rem;
+    }
+    .pub-title {
+      font-weight: 600;
+    }
+    .pub-meta {
+      color: #555;
+      font-size: 0.95rem;
+    }
+    .pub-links a {
+      font-size: 0.9rem;
+      text-decoration: none;
+      margin-right: 0.75rem;
+    }
+    .pub-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- HEADER -->
+    <header>
+      <h1>Your Name</h1>
+      <p class="subtitle">Your Title / Affiliation (e.g., M.S. student in Computer Science, Northeastern University)</p>
+      <!-- Optional contact links -->
+      <p>
+        <a href="mailto:do.ng@northeastern.edu">Email</a> ·
+        <a href="https://github.com/ylanad22">GitHub</a> ·
+      </p>
+    </header>
+
+    <!-- INTRODUCTION -->
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I’m a researcher interested in human-centered AI, accessibility, and
+        interactive systems. I work on building and evaluating tools that help
+        people make sense of complex information and adapt technology to their needs.
+      </p>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+      <h2>Publications</h2>
+      <ul class="publications">
+        <li>
+          <span class="pub-title">
+            How well can VLMs rate audio descriptions: A multi-dimensional quantitative assessment framework
+          </span><br />
+          <span class="pub-meta">
+            Lana Do, Gio Jung, Juvenal Francisco Barajas, Andrew Taylor Scott, Shasta Ihorn, Dr. Alexander Mario Blum, Vassilis Athitsos, Ilmi Yoon <em>Under Review CHI</em>, 2026.
+          </span><br />
+          <span class="pub-links">
+            <!-- If your PDF is in /papers/paper1.pdf -->
+            <a href="papers/VLM_as_rater_clean.pdf" target="_blank" rel="noopener">[PDF]</a>
+            <!-- Optional extra links:
+            <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank" rel="noopener">[arXiv]</a>
+            <a href="https://doi.org/..." target="_blank" rel="noopener">[DOI]</a>
+            -->
+          </span>
+        </li>
+
+        <li>
+          <span class="pub-title">
+            ADx3: A Collaborative Workflow for High-Quality Accessible Audio Description
+          </span><br />
+          <span class="pub-meta">
+            Lana Do, Shasta Ihorn, Charity Pitcher-Cooper, Juvenal Francisco Barajas, Gio Jung, Xuan Duy Anh Nguyen, Sanjay Mirani, Ilmi Yoon. <em>Neurips Workshop</em>, 2025.
+          </span><br />
+          <span class="pub-links">
+            <a href="papers/ADx3_manuscript.pdf" target="_blank" rel="noopener">[PDF]</a>
+            <a href="papers/neurips poster adx3.pdf" target="_blank" rel="noopener">[PDF]</a>
+          </span>
+        </li>
+
+        <!-- Add more <li> entries for each publication -->
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
