@@ -1,136 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <title>Lana Do – Homepage</title>
+  <title>Lana Do</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f6f6f6;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 3rem;
-      background-color: #ffffff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      min-height: 100vh;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.25rem;
-    }
-    h2 {
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 0.25rem;
-    }
-    p {
-      line-height: 1.5;
-    }
-    .subtitle {
-      color: #666;
-      margin-top: 0;
-      margin-bottom: 1.5rem;
-    }
-    ul.publications {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul.publications li {
-      margin-bottom: 0.85rem;
-    }
-    .pub-title {
-      font-weight: 600;
-    }
-    .pub-meta {
-      color: #555;
-      font-size: 0.95rem;
-    }
-    .pub-links a {
-      font-size: 0.9rem;
-      text-decoration: none;
-      margin-right: 0.75rem;
-    }
-    .pub-links a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <meta name="description"
+    content="Lana Do, a researcher in human-centered AI and accessibility at Northeastern University." />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="images/icon-removebg-preview.png" />
 </head>
+
 <body>
   <div class="container">
+
     <!-- HEADER -->
-    <header>
-      <h1>Lana Do</h1>
-      <p class="subtitle"> M.S. student in Computer Science, Northeastern University)</p>
-      <!-- Optional contact links -->
-      <p>
-        <a href="mailto:do.ng@northeastern.edu">Email</a> ·
-        <a href="https://github.com/ylanad22">GitHub</a> ·
-      </p>
+    <header class="header">
+      <img class="profile" src="images/profile.jpg" alt="Lana Do" />
+      <div>
+        <h1>Lana Do</h1>
+        <p class="role">M.S. in Computer Science, Northeastern University</p>
+        <p class="links">
+          <a href="mailto:do.ng@northeastern.edu">Email</a>
+          <a href="https://github.com/ylanad22" target="_blank" rel="noopener">GitHub</a>
+          <a href="#" target="_blank" rel="noopener">Scholar</a>
+          <a href="cv.pdf" target="_blank" rel="noopener">CV</a>
+        </p>
+      </div>
     </header>
 
-    <!-- INTRODUCTION -->
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        I’m a researcher interested in human-centered AI, accessibility, and
-        interactive systems. I work on building and evaluating tools that help
-        people make sense of complex information and adapt technology to their needs.
-      </p>
-    </section>
+    <div class="layout">
 
-    <!-- PUBLICATIONS -->
-    <section id="publications">
-      <h2>Publications</h2>
-      <ul class="publications">
-        <li>
-          <span class="pub-title">
-            How well can VLMs rate audio descriptions: A multi-dimensional quantitative assessment framework
-          </span><br />
-          <span class="pub-meta">
-            Lana Do, Gio Jung, Juvenal Francisco Barajas, Andrew Taylor Scott, Shasta Ihorn, Alexander Mario Blum, Vassilis Athitsos, and Ilmi Yoon. <em>Under Review CHI</em>, 2026.
-          </span><br />
-          <span class="pub-links">
-            <!-- If your PDF is in /papers/paper1.pdf -->
-            <a href="papers/evaluating_AD.pdf" target="_blank" rel="noopener">[PDF]</a>
-            <!-- Optional extra links:
-            <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank" rel="noopener">[arXiv]</a>
-            <a href="https://doi.org/..." target="_blank" rel="noopener">[DOI]</a>
-            -->
-          </span>
-        </li>
+      <!-- LEFT COLUMN: main content -->
+      <main>
 
-        <li>
-          <span class="pub-title">
-            ADx3: A Collaborative Workflow for High-Quality Accessible Audio Description
-          </span><br />
-          <span class="pub-meta">
-            Lana Do, Shasta Ihorn, Charity Pitcher-Cooper, Juvenal Francisco Barajas, Gio Jung, Xuan Duy Anh Nguyen, Sanjay Mirani, Ilmi Yoon. <em>Neurips Workshop</em>, 2025.
-          </span><br />
-          <span class="pub-links">
-            <a href="papers/ADx3.pdf" target="_blank" rel="noopener">[PDF]</a>
-            <a href="papers/poster.pdf" target="_blank" rel="noopener">[Poster]</a>
-          </span>
-        </li>
+        <!-- ABOUT -->
+        <section id="about">
+          <h2>About</h2>
+          <p>
+            I'm a researcher at Northeastern's Khoury College of Computer Sciences,
+            working on the <a href="https://youdescribe.org" target="_blank" rel="noopener">YouDescribe</a>
+            project under Professor <a href="#" target="_blank" rel="noopener">Ilmi Yoon</a>.
+            My work focuses on AI-assisted audio description for blind and low-vision users,
+            spanning system development, user studies, and evaluation methodology.
+          </p>
+          <p>
+            I'm broadly interested in human-centered AI, accessibility, and how people
+            and AI can collaborate on creative tasks.
+          </p>
+        </section>
 
-        <li>
-          <span class="pub-title">
-            Beyond Lexical Overlap: Validating Semantic Similarity Metrics for LLM-Based Video Caption Augmentation
-          </span><br />
-          <span class="pub-meta">
-            Juvenal Francisco Barajas*, Gio Jung*, Manali Seth, Lana Do, Malleeswari Jagabattuni, Andrew Scott, Shasta Ihorn, Vassilis Athitsos, and Ilmi Yoon. <em>Under Review ICIIT</em>, 2026.
-          <span class="pub-links">
-            <a href="papers/iciit_manuscript.pdf" target="_blank" rel="noopener">[PDF]</a>
-          </span>
-        </li>
+        <!-- PUBLICATIONS -->
+        <section id="publications">
+          <h2>Papers</h2>
 
-      </ul>
-    </section>
+          <article class="pub">
+            <img class="pub-thumb" src="papers/thumbnails/uist.gif" alt="" />
+            <div>
+              <p class="pub-title">Making AI Drafts Count: A Quality Threshold in Audio Description Workflows</p>
+              <p class="pub-authors"><strong>Lana Do</strong>, Shasta Ihorn, Charity M. Pitcher-Cooper, Sanjay Mirani,
+                Gio Jung, Zhenzhen Qin, Hyunjoo Shim, Kien T. Nguyen, Vassilis Athitsos, and Ilmi Yoon</p>
+              <p class="pub-links">
+                <a href="papers/evaluating_AD.pdf" target="_blank" rel="noopener">[PDF]</a>
+                <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank" rel="noopener">[Video]</a>
+                <!-- <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank" rel="noopener">[arXiv]</a> -->
+              </p>
+            </div>
+          </article>
+
+          <article class="pub">
+            <img class="pub-thumb" src="papers/thumbnails/diagram.png" alt="" />
+            <div>
+              <p class="pub-title">Toward Scalable Audio Description Quality Control: A Workflow for Evaluating Human
+                and VLM Raters</p>
+              <p class="pub-authors"><strong>Lana Do</strong>, Gio Jung, Juvenal Francisco Barajas, Andrew Taylor Scott,
+                Alexander Mario Blum, Shasta Ihorn, Vassilis Athitsos, and Ilmi Yoon</p>
+              <p class="pub-links">
+                <a href="papers/ADx3.pdf" target="_blank" rel="noopener">[PDF]</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="pub">
+            <img class="pub-thumb" src="papers/thumbnails/collaborative-4.png" alt="" />
+            <div>
+              <p class="pub-title">YouDescribe: Bridging AI Efficiency and Human Insight for Scalable Audio Description
+              </p>
+              <p class="pub-authors"><strong>Lana Do</strong>, Sanjay Mirani, Charity Pitcher-Cooper, Xuan Duy Anh
+                Nguyen, Alekya Bairaboina, Ilmi Yoon</p>
+              <p class="pub-venue">CHIWORK '25 Adjunct, 2025</p>
+              <p class="pub-links">
+                <a href="https://doi.org/10.1145/3707640.3731916" target="_blank" rel="noopener">[DOI]</a>
+                <a href="papers/chiwork.pdf" target="_blank" rel="noopener">[PDF]</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="pub">
+            <img class="pub-thumb" src="papers/thumbnails/sentiment.png" alt="" />
+            <div>
+              <p class="pub-title">Fine-tuning DeBERTaV3 with Adaptive Training Strategies for Fine-Grained Sentiment
+                Analysis</p>
+              <p class="pub-authors"><strong>Lana Do</strong>, Tehmina Amjad</p>
+              <p class="pub-venue">IEEE Conference on Artificial Intelligence (CAI), 2025</p>
+              <p class="pub-links">
+                <a href="https://doi.org/10.1109/CAI64502.2025.00026" target="_blank" rel="noopener">[DOI]</a>
+                <a href="papers/sentiment-analysis.pdf" target="_blank" rel="noopener">[PDF]</a>
+              </p>
+            </div>
+          </article>
+        </section>
+
+        <article class="pub">
+          <img class="pub-thumb" src="papers/thumbnails/taxonomy.png" alt="" />
+          <div>
+            <p class="pub-title">Advancing AI Incidents Classification: Leveraging LLMs with Strategic Prompting</p>
+            <p class="pub-authors">Yian Chen, <strong>Lana Do</strong>, Liheng Yi, Ricardo Baeza-Yates, John A.
+              Guerra-Gomez</p>
+            <p class="pub-venue">HCI-COLLAB 2024 (Iberoamerican Workshop on Human-Computer Interaction), Springer CCIS
+              vol. 2332, 2025</p>
+            <p class="pub-links">
+              <a href="https://doi.org/10.1007/978-3-031-91328-0_4" target="_blank" rel="noopener">[DOI]</a>
+              <a href="papers/Irresponsible_AI_Data_Curation.pdf" target="_blank" rel="noopener">[PDF]</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- POSTERS & PRESENTATIONS -->
+        <section id="presentations">
+          <h2>Posters &amp; Presentations</h2>
+
+          <article class="pub">
+            <img class="pub-thumb" src="papers/thumbnails/ang.png" alt="" />
+            <div>
+              <p class="pub-title">Collaborative Innovation in Audio Description: Integrating Community, Education, and
+                AI to Advance Accessible Media</p>
+              <p class="pub-authors">Charity Pitcher-Cooper, <strong>Lana Do</strong>, Shasta Ihorn</p>
+              <p class="pub-venue">NARRTC Conference, Virginia, April 2026</p>
+              <p class="pub-links">
+                <a href="papers/ANG 2026 YouDescribe.pptx.pdf" target="_blank" rel="noopener">[Slides]</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="pub">
+            <img class="pub-thumb" src="papers/thumbnails/ADx3.png" alt="" />
+            <div>
+              <p class="pub-title">ADx3: A Collaborative Workflow for High-Quality Accessible Audio Description</p>
+              <p class="pub-authors"><strong>Lana Do,</strong> Shasta Ihorn, Charity M Pitcher-Cooper, Juvenal Francisco
+                Barajas, Gio Jung, Xuan Duy Anh Nguyen, Sanjay Mirani, Ilmi Yoon</p>
+              <p class="pub-venue">Poster, NeurIPS Women in Machine Learning Workshop, December 2025</p>
+              <p class="pub-links">
+                <a href="papers/poster.pdf" target="_blank" rel="noopener">[Poster]</a>
+                <a href="https://arxiv.org/abs/2602.02684" target="_blank" rel="noopener">[Paper]</a>
+              </p>
+            </div>
+          </article>
+
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects">
+          <h2>Projects &amp; Competitions</h2>
+
+          <article class="pub">
+            <img class="pub-thumb" src="papers/thumbnails/ebay.png" alt="" />
+            <div>
+              <p class="pub-title">eBay University Machine Learning Competition — 4th place</p>
+              <p class="pub-authors"><strong>Lana Do</strong>, Gio Jung, and Juvenal Francisco Barajas</p>
+              <p class="pub-venue">eBay 2025 University ML Competition, hosted on EvalAI</p>
+              <p class="pub-links">
+                <a href="https://eval.ai/web/challenges/challenge-page/2508/leaderboard/6263" target="_blank"
+                  rel="noopener">[Leaderboard]</a>
+              </p>
+            </div>
+          </article>
+          <article class="pub">
+            <img class="pub-thumb" src="papers/thumbnails/wanderfinds.png" alt="" />
+            <div>
+              <p class="pub-title">Wander Finds: Personalized Hidden Gems</p>
+              <p class="pub-authors">Yian Chen, Lana Do,  Kelvin Christian, and Kasi Viswanath Vandanapu</p>
+              <p class="pub-venue">Google Gemini API Competition, 2024</p>
+              <p class="pub-links">
+                <a href="https://www.youtube.com/watch?v=WdoZG150m08" target="_blank" rel="noopener">[Video]</a>
+              </p>
+            </div>
+          </article>
+
+        </section>
+
+      </main>
+
+      <!-- RIGHT COLUMN: News -->
+      <aside class="news">
+        <section>
+          <h2>News</h2>
+
+          <div class="news-item">
+            <p class="news-date">Apr 2026</p>
+            <p class="news-headline">Khoury College feature on YouDescribe</p>
+            <p class="news-blurb">Featured in <a
+                href="https://www.khoury.northeastern.edu/with-this-ai-driven-tool-blind-users-can-experience-youtube-and-tiktok-videos-too/"
+                target="_blank" rel="noopener">Khoury News</a> on the team's AI-driven audio description work and recent
+              Ability Central grant.</p>
+          </div>
+
+          <div class="news-item">
+            <p class="news-date">Nov 2025</p>
+            <p class="news-headline">Accessible Media Inc <em>Reflections</em> podcast episode</p>
+            <p class="news-blurb">Spoke about YouDescribe and AI-assisted audio description on AMI's <a
+                href="https://open.spotify.com/episode/0KLgqIkX4GEPdHCF4H02BF" target="_blank"
+                rel="noopener">Reflections podcast</a>.</p>
+          </div>
+
+          <div class="news-item">
+            <p class="news-date">Jun 2025</p>
+            <p class="news-headline">YouDescribe featured in Northeastern Global News</p>
+            <p class="news-blurb">Northeastern Global News covered <a
+                href="https://news.northeastern.edu/2025/06/27/video-accessibility-blind-users-ai/" target="_blank"
+                rel="noopener">our work using vision-language models</a> to improve video accessibility for blind users.
+            </p>
+          </div>
+
+          <div class="news-item">
+            <p class="news-date">May 2025</p>
+            <p class="news-headline">Graduated from Northeastern</p>
+            <p class="news-blurb">Completed M.S. in Computer Science at Northeastern's Khoury College, Silicon Valley
+              campus.</p>
+          </div>
+
+          <div class="news-item">
+            <p class="news-date">Apr 2025</p>
+            <p class="news-headline">Northeastern Graduate Research Award</p>
+            <p class="news-blurb">Received the Northeastern Graduate Research Award, one of three students selected
+              university wide.</p>
+          </div>
+
+        </section>
+      </aside>
+
+    </div>
+
+    <footer>
+      © 2026 Lana Do
+    </footer>
+
   </div>
 </body>
+
 </html>
