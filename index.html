@@ -3,21 +3,55 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Lana Do</title>
+  <title>Lana Do — Researcher, Northeastern University</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
     content="Lana Do, a researcher in human-centered AI and accessibility at Northeastern University." />
 
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="images/icon-removebg-preview.png" />
+
+  <style>
+    /* Visually-hidden class for screen-reader-only context.
+       Add this to your styles.css instead if you prefer. */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Skip link — visible only on focus */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: #000;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      z-index: 100;
+      text-decoration: none;
+    }
+
+    .skip-link:focus {
+      left: 0;
+    }
+  </style>
 </head>
 
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <div class="container">
 
     <!-- HEADER -->
     <header class="header">
-      <img class="profile" src="images/profile.jpg" alt="Lana Do" />
+      <img class="profile" src="images/profile.jpg" alt="Photo of Lana Do" />
       <div>
         <h1>Lana Do</h1>
         <p class="role">M.S. in Computer Science, Northeastern University</p>
@@ -31,11 +65,11 @@
     <div class="layout">
 
       <!-- LEFT COLUMN: main content -->
-      <main>
+      <main id="main-content">
 
         <!-- ABOUT -->
-        <section id="about">
-          <h2>About</h2>
+        <section id="about" aria-labelledby="about-heading">
+          <h2 id="about-heading">About</h2>
           <p>
             I'm a researcher at Northeastern's Khoury College of Computer Sciences,
             working on the <a href="https://youdescribe.org" target="_blank" rel="noopener">YouDescribe</a>
@@ -50,37 +84,40 @@
         </section>
 
         <!-- PUBLICATIONS -->
-        <section id="publications">
-          <h2>Papers</h2>
+        <section id="publications" aria-labelledby="publications-heading">
+          <h2 id="publications-heading">Papers</h2>
 
           <article class="pub">
-            <img class="pub-thumb" src="papers/thumbnails/uist.gif" alt="" />
+            <img class="pub-thumb" src="papers/thumbnails/uist.gif" alt="" role="presentation" />
             <div>
               <p class="pub-title">Making AI Drafts Count: A Quality Threshold in Audio Description Workflows</p>
               <p class="pub-authors"><strong>Lana Do</strong>, Shasta Ihorn, Charity M. Pitcher-Cooper, Sanjay Mirani,
                 Gio Jung, Zhenzhen Qin, Hyunjoo Shim, Kien T. Nguyen, Vassilis Athitsos, and Ilmi Yoon</p>
               <p class="pub-links">
-                <a href="https://arxiv.org/abs/2605.05348" target="_blank" rel="noopener">[PDF]</a>
-                <a href="https://www.youtube.com/watch?v=rhUJWRMpxug&t=1s" target="_blank" rel="noopener">[Video]</a>
+                <a href="https://arxiv.org/abs/2605.05348" target="_blank" rel="noopener"
+                   aria-label="PDF of Making AI Drafts Count">[PDF]</a>
+                <a href="https://www.youtube.com/watch?v=rhUJWRMpxug&t=1s" target="_blank" rel="noopener"
+                   aria-label="Video for Making AI Drafts Count">[Video]</a>
               </p>
             </div>
           </article>
 
           <article class="pub">
-            <img class="pub-thumb" src="papers/thumbnails/diagram.png" alt="" />
+            <img class="pub-thumb" src="papers/thumbnails/diagram.png" alt="" role="presentation" />
             <div>
               <p class="pub-title">Toward Scalable Audio Description Quality Control: A Workflow for Evaluating Human
                 and VLM Raters</p>
               <p class="pub-authors"><strong>Lana Do</strong>, Gio Jung, Juvenal Francisco Barajas, Andrew Taylor Scott,
                 Alexander Mario Blum, Shasta Ihorn, Vassilis Athitsos, and Ilmi Yoon</p>
               <p class="pub-links">
-                <a href="https://arxiv.org/abs/2602.01390" target="_blank" rel="noopener">[PDF]</a>
+                <a href="https://arxiv.org/abs/2602.01390" target="_blank" rel="noopener"
+                   aria-label="PDF of Toward Scalable Audio Description Quality Control">[PDF]</a>
               </p>
             </div>
           </article>
 
           <article class="pub">
-            <img class="pub-thumb" src="papers/thumbnails/collaborative-4.png" alt="" />
+            <img class="pub-thumb" src="papers/thumbnails/collaborative-4.png" alt="" role="presentation" />
             <div>
               <p class="pub-title">YouDescribe: Bridging AI Efficiency and Human Insight for Scalable Audio Description
               </p>
@@ -88,69 +125,78 @@
                 Nguyen, Alekya Bairaboina, Ilmi Yoon</p>
               <p class="pub-venue">CHIWORK '25 Adjunct, 2025</p>
               <p class="pub-links">
-                <a href="https://doi.org/10.1145/3707640.3731916" target="_blank" rel="noopener">[DOI]</a>
-                <a href="papers/chiwork.pdf" target="_blank" rel="noopener">[PDF]</a>
+                <a href="https://doi.org/10.1145/3707640.3731916" target="_blank" rel="noopener"
+                   aria-label="DOI for YouDescribe: Bridging AI Efficiency and Human Insight">[DOI]</a>
+                <a href="papers/chiwork.pdf" target="_blank" rel="noopener"
+                   aria-label="PDF of YouDescribe: Bridging AI Efficiency and Human Insight">[PDF]</a>
               </p>
             </div>
           </article>
 
           <article class="pub">
-            <img class="pub-thumb" src="papers/thumbnails/sentiment.png" alt="" />
+            <img class="pub-thumb" src="papers/thumbnails/sentiment.png" alt="" role="presentation" />
             <div>
               <p class="pub-title">Fine-tuning DeBERTaV3 with Adaptive Training Strategies for Fine-Grained Sentiment
                 Analysis</p>
               <p class="pub-authors"><strong>Lana Do</strong>, Tehmina Amjad</p>
               <p class="pub-venue">IEEE Conference on Artificial Intelligence (CAI), 2025</p>
               <p class="pub-links">
-                <a href="https://doi.org/10.1109/CAI64502.2025.00026" target="_blank" rel="noopener">[DOI]</a>
-                <a href="papers/sentiment-analysis.pdf" target="_blank" rel="noopener">[PDF]</a>
+                <a href="https://doi.org/10.1109/CAI64502.2025.00026" target="_blank" rel="noopener"
+                   aria-label="DOI for Fine-tuning DeBERTaV3">[DOI]</a>
+                <a href="papers/sentiment-analysis.pdf" target="_blank" rel="noopener"
+                   aria-label="PDF of Fine-tuning DeBERTaV3">[PDF]</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="pub">
+            <img class="pub-thumb" src="papers/thumbnails/taxonomy.png" alt="" role="presentation" />
+            <div>
+              <p class="pub-title">Advancing AI Incidents Classification: Leveraging LLMs with Strategic Prompting</p>
+              <p class="pub-authors">Yian Chen, <strong>Lana Do</strong>, Liheng Yi, Ricardo Baeza-Yates, John A.
+                Guerra-Gomez</p>
+              <p class="pub-venue">HCI-COLLAB 2024 (Iberoamerican Workshop on Human-Computer Interaction), Springer CCIS
+                vol. 2332, 2025</p>
+              <p class="pub-links">
+                <a href="https://doi.org/10.1007/978-3-031-91328-0_4" target="_blank" rel="noopener"
+                   aria-label="DOI for Advancing AI Incidents Classification">[DOI]</a>
+                <a href="papers/Irresponsible_AI_Data_Curation.pdf" target="_blank" rel="noopener"
+                   aria-label="PDF of Advancing AI Incidents Classification">[PDF]</a>
               </p>
             </div>
           </article>
         </section>
 
-        <article class="pub">
-          <img class="pub-thumb" src="papers/thumbnails/taxonomy.png" alt="" />
-          <div>
-            <p class="pub-title">Advancing AI Incidents Classification: Leveraging LLMs with Strategic Prompting</p>
-            <p class="pub-authors">Yian Chen, <strong>Lana Do</strong>, Liheng Yi, Ricardo Baeza-Yates, John A.
-              Guerra-Gomez</p>
-            <p class="pub-venue">HCI-COLLAB 2024 (Iberoamerican Workshop on Human-Computer Interaction), Springer CCIS
-              vol. 2332, 2025</p>
-            <p class="pub-links">
-              <a href="https://doi.org/10.1007/978-3-031-91328-0_4" target="_blank" rel="noopener">[DOI]</a>
-              <a href="papers/Irresponsible_AI_Data_Curation.pdf" target="_blank" rel="noopener">[PDF]</a>
-            </p>
-          </div>
-        </article>
-
         <!-- POSTERS & PRESENTATIONS -->
-        <section id="presentations">
-          <h2>Posters &amp; Presentations</h2>
+        <section id="presentations" aria-labelledby="presentations-heading">
+          <h2 id="presentations-heading">Posters &amp; Presentations</h2>
 
           <article class="pub">
-            <img class="pub-thumb" src="papers/thumbnails/ang.png" alt="" />
+            <img class="pub-thumb" src="papers/thumbnails/ang.png" alt="" role="presentation" />
             <div>
               <p class="pub-title">Collaborative Innovation in Audio Description: Integrating Community, Education, and
                 AI to Advance Accessible Media</p>
               <p class="pub-authors">Charity Pitcher-Cooper, <strong>Lana Do</strong>, Shasta Ihorn</p>
               <p class="pub-venue">NARRTC Conference, Virginia, April 2026</p>
               <p class="pub-links">
-                <a href="papers/ANG 2026 YouDescribe.pptx.pdf" target="_blank" rel="noopener">[Slides]</a>
+                <a href="papers/ANG 2026 YouDescribe.pptx.pdf" target="_blank" rel="noopener"
+                   aria-label="Slides for Collaborative Innovation in Audio Description">[Slides]</a>
               </p>
             </div>
           </article>
 
           <article class="pub">
-            <img class="pub-thumb" src="papers/thumbnails/ADx3.png" alt="" />
+            <img class="pub-thumb" src="papers/thumbnails/ADx3.png" alt="" role="presentation" />
             <div>
               <p class="pub-title">ADx3: A Collaborative Workflow for High-Quality Accessible Audio Description</p>
               <p class="pub-authors"><strong>Lana Do,</strong> Shasta Ihorn, Charity M Pitcher-Cooper, Juvenal Francisco
                 Barajas, Gio Jung, Xuan Duy Anh Nguyen, Sanjay Mirani, Ilmi Yoon</p>
               <p class="pub-venue">Poster, NeurIPS Women in Machine Learning Workshop, December 2025</p>
               <p class="pub-links">
-                <a href="papers/poster.pdf" target="_blank" rel="noopener">[Poster]</a>
-                <a href="https://arxiv.org/abs/2602.02684" target="_blank" rel="noopener">[Paper]</a>
+                <a href="papers/poster.pdf" target="_blank" rel="noopener"
+                   aria-label="Poster for ADx3: A Collaborative Workflow">[Poster]</a>
+                <a href="https://arxiv.org/abs/2602.02684" target="_blank" rel="noopener"
+                   aria-label="Paper for ADx3: A Collaborative Workflow">[Paper]</a>
               </p>
             </div>
           </article>
@@ -158,29 +204,31 @@
         </section>
 
         <!-- PROJECTS -->
-        <section id="projects">
-          <h2>Projects &amp; Competitions</h2>
+        <section id="projects" aria-labelledby="projects-heading">
+          <h2 id="projects-heading">Projects &amp; Competitions</h2>
 
           <article class="pub">
-            <img class="pub-thumb" src="papers/thumbnails/ebay.png" alt="" />
+            <img class="pub-thumb" src="papers/thumbnails/ebay.png" alt="" role="presentation" />
             <div>
               <p class="pub-title">eBay University Machine Learning Competition — 4th place</p>
               <p class="pub-authors"><strong>Lana Do</strong>, Gio Jung, and Juvenal Francisco Barajas</p>
               <p class="pub-venue">eBay 2025 University ML Competition, hosted on EvalAI</p>
               <p class="pub-links">
                 <a href="https://eval.ai/web/challenges/challenge-page/2508/leaderboard/6263" target="_blank"
-                  rel="noopener">[Leaderboard]</a>
+                  rel="noopener" aria-label="Leaderboard for eBay University Machine Learning Competition">[Leaderboard]</a>
               </p>
             </div>
           </article>
+
           <article class="pub">
-            <img class="pub-thumb" src="papers/thumbnails/wanderfinds.png" alt="" />
+            <img class="pub-thumb" src="papers/thumbnails/wanderfinds.png" alt="" role="presentation" />
             <div>
               <p class="pub-title">Wander Finds: Personalized Hidden Gems</p>
               <p class="pub-authors">Yian Chen, Lana Do, Kelvin Christian, and Kasi Viswanath Vandanapu</p>
               <p class="pub-venue">Google Gemini API Competition, 2024</p>
               <p class="pub-links">
-                <a href="https://www.youtube.com/watch?v=WdoZG150m08" target="_blank" rel="noopener">[Video]</a>
+                <a href="https://www.youtube.com/watch?v=WdoZG150m08" target="_blank" rel="noopener"
+                   aria-label="Video for Wander Finds: Personalized Hidden Gems">[Video]</a>
               </p>
             </div>
           </article>
@@ -190,9 +238,9 @@
       </main>
 
       <!-- RIGHT COLUMN: News -->
-      <aside class="news">
+      <aside class="news" aria-labelledby="news-heading">
         <section>
-          <h2>News</h2>
+          <h2 id="news-heading">News</h2>
 
           <div class="news-item">
             <p class="news-date">Apr 2026</p>
@@ -232,7 +280,7 @@
             <p class="news-headline">Khoury College Graduate Research Award</p>
             <p class="news-blurb">I was selected as the 2025 recipient of the Khoury College Graduate Research Award. <a
                 href="https://www.khoury.northeastern.edu/meet-the-2025-khoury-college-award-winners/" target="_blank"
-                rel="noopener">[Article]</a></p>
+                rel="noopener" aria-label="Article on 2025 Khoury College Award winners">[Article]</a></p>
           </div>
         </section>
       </aside>
