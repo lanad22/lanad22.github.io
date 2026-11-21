@@ -4,7 +4,7 @@
   --border: #DDD9D0;            /* crisper neutral border */
   --text: #14130F;              /* near-black, high contrast */
   --muted: #4A4842;             /* darker muted for body authors/desc */
-  --soft: #7A7770;              /* meta text — labels, dates */
+  --soft: #6E6B64;              /* meta text — labels, dates (≥4.5:1 on bg and surface) */
   --accent: #8B5A3C;            /* single warm accent (links, hover) */
   --accent-soft: #EFE7DB;
 }
@@ -35,6 +35,20 @@ a {
 
 a:hover {
   border-bottom-color: var(--accent);
+}
+
+/* Links inside running text are underlined so they aren't identified by color alone */
+#about a,
+.news-blurb a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+#about a:hover,
+.news-blurb a:hover {
+  border-bottom-color: transparent;
+  text-decoration-thickness: 2px;
 }
 
 .container {
